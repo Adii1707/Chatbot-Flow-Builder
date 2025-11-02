@@ -31,7 +31,7 @@ It allows you to visually design chatbot message flows by connecting message nod
 
 ### 💾 5. Save Flow
 - Validates the flow on save:
-  - If there are more than one nodes, at most one node can have an empty source handle.
+  - If there is more than one node, at most one node can have an empty source handle.
   - Shows an error if multiple nodes are disconnected.
 - Displays a success message if validation passes.
 
@@ -41,7 +41,7 @@ It allows you to visually design chatbot message flows by connecting message nod
 
 | Technology | Purpose |
 |-------------|----------|
-| ⚛️ React | Frontend Framework |
+| ⚛️ React | JavaScript Library for Building UIs |
 | 🧠 React Flow | Visual node-based flow management |
 | 🎨 CSS / Flexbox | Layout and styling |
 | 🆔 UUID | Unique ID generation for nodes |
