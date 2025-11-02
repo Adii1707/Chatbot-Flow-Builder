@@ -41,7 +41,7 @@ It allows you to visually design chatbot message flows by connecting message nod
 
 | Technology | Purpose |
 |-------------|----------|
-| ⚛️ React | Frontend Framework |
+| ⚛️ React | JavaScript Library for Building UIs |
 | 🧠 React Flow | Visual node-based flow management |
 | 🎨 CSS / Flexbox | Layout and styling |
 | 🆔 UUID | Unique ID generation for nodes |
