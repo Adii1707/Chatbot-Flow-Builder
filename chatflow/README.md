@@ -47,7 +47,5 @@ It allows you to visually design chatbot message flows by connecting message nod
 | 🆔 UUID | Unique ID generation for nodes |
 | 🚀 Vercel | Hosting platform |
 
----
 
-## 🧩 Project Structure
 
