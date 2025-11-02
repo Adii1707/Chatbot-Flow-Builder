@@ -1,0 +1,117 @@
+:root {
+  --left-width: 300px;
+}
+
+* { box-sizing: border-box; }
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+.topbar {
+  height: 56px;
+  background: #fff;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding: 0 16px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
+.flowpage {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* Left panel (Nodes / Settings) */
+.left-panel {
+  width: var(--left-width);
+  background: #fff;
+  border-right: 1px solid #f0f0f0;
+  padding: 16px;
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Nodes panel card */
+.nodes-panel {
+  flex: 1;
+}
+.node-item {
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  border: 1px solid #dfe7f2;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: grab;
+  width: 100%;
+  max-width: 240px;
+}
+.node-icon { font-size: 20px; }
+.node-label { font-weight: 600; }
+
+/* Settings panel */
+.settings-panel .form-group {
+  margin-top: 12px;
+}
+.settings-panel textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  resize: vertical;
+}
+.back-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Save block */
+.save-block { margin-top: auto; }
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #2b6cff;
+  background: white;
+  color: #2b6cff;
+  font-weight:600;
+  cursor: pointer;
+}
+.error {
+  margin-top:8px;
+  background: #ffd6d6;
+  color: #7a1616;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight:600;
+}
+
+/* Canvas area */
+.canvas {
+  flex: 1;
+}
+
+/* Textnode style (if CSS not loaded via component) - fallback */
+.textnode { font-family: Inter, sans-serif; }
+
+/* small utility buttons */
+.btn {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d7ff;
+  background: #f7f9ff;
+  cursor: pointer;
+}
+.btn-danger {
+  border-color: #ffd6d6;
+  background: #fff6f6;
+  color: #b00000;
+}

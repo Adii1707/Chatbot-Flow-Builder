@@ -1,0 +1,25 @@
+.textnode {
+  width: 220px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 6px 16px rgba(26, 26, 27, 0.08);
+  border: none;
+  font-family: Inter, Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.textnode-header {
+  background: #cff7ee; /* minty teal like screenshot header */
+  padding: 8px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-weight:600;
+  font-size:14px;
+}
+
+.textnode-body {
+  padding: 10px 12px;
+  min-height: 48px;
+  color: #333;
+}
