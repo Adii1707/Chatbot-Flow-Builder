@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# 💬 Chatbot Flow Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple yet extensible **Chatbot Flow Builder** built using **React** and **React Flow**.  
+It allows you to visually design chatbot message flows by connecting message nodes together — similar to tools like Dialogflow or ManyChat.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://chatbot-flow-builder-sable-theta.vercel.app/](https://chatbot-flow-builder-sable-theta.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧩 1. Nodes Panel
+- Displays all node types supported by the flow builder.  
+- Currently includes only the **Text Message Node**.  
+- Designed to be **easily extensible** — future nodes like “Image”, “Button”, or “Delay” can be added with minimal changes.
 
-## Expanding the ESLint configuration
+### 💬 2. Text Node
+- Represents a single chatbot message.  
+- Can be connected with other nodes to define a conversation flow.  
+- Supports editing message text via the **Settings Panel**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔗 3. Edges & Handles
+- **Source Handle:** One outgoing edge per node (enforced).
+- **Target Handle:** Can have multiple incoming edges.
+- Ensures logical, directional message flow.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### ⚙️ 4. Settings Panel
+- Appears when a node is selected.  
+- Allows editing node text and deleting the selected node.  
+- Replaces the Nodes Panel when active.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 💾 5. Save Flow
+- Validates the flow on save:
+  - If there are more than one nodes, at most one node can have an empty source handle.
+  - Shows an error if multiple nodes are disconnected.
+- Displays a success message if validation passes.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧱 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Technology | Purpose |
+|-------------|----------|
+| ⚛️ React | Frontend Framework |
+| 🧠 React Flow | Visual node-based flow management |
+| 🎨 CSS / Flexbox | Layout and styling |
+| 🆔 UUID | Unique ID generation for nodes |
+| 🚀 Vercel | Hosting platform |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🧩 Project Structure
+
